@@ -16,12 +16,6 @@ class AdminSiteTests(TestCase):
             email='test@gmail.com',
             name='Test user full name'
         )
-        self.client.force_login(self.admin_user)
-        self.user = get_user_model().objects.create_user(
-            email='test@gmail.com',
-            password='123',
-            name='Test user full name'
-        )
 
     def test_users_listed(self):
         """Test that users are listed on user page"""
